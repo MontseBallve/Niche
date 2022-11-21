@@ -1,3 +1,11 @@
+.container{
+background-color: #f1eee8;
+}
+
+#contenedorCarrito{
+    background-color: #eae6de;
+}
+
 .imgProductos{
     width: 150px;
     height: 200px;
