@@ -159,7 +159,7 @@ const calcularTotal = () => {
 //Ruta relativa
 
 const listado = document.getElementById ("listado");
-const listadoProductos = "jason/productos.json";
+const listadoProductos = "json/productos.json";
 
 fetch(listadoProductos)
     .then(respuesta => respuesta.json())
