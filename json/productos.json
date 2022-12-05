@@ -1,0 +1,12 @@
+[
+    {"nombre": "Agenda 2023", "precio": 3950, "id": 1},
+    {"nombre": "Buzo con capucha", "precio": 4185, "id": 2},
+    {"nombre": "Cuaderno espiralado", "precio": 2450, "id": 3},
+    {"nombre": "Juego de 6 vaos", "precio": 2501, "id": 4},
+    {"nombre": "Llavero", "precio": 7500, "id": 5},
+    {"nombre": "Musculosa", "precio": 2735, "id": 6},
+    {"nombre": "Remera con mangas", "precio": 2998, "id": 7},
+    {"nombre": "Remera sin mangas", "precio": 2299, "id": 8},
+    {"nombre": "Set remera-bolsa-taza", "precio": 4655, "id": 9},
+    {"nombre": "Taza", "precio": 1890, "id": 10}
+]
