@@ -1,12 +1,12 @@
 [
-    {"nombre": "Agenda 2023", "precio": 3950, "id": 1},
-    {"nombre": "Buzo con capucha", "precio": 4185, "id": 2},
-    {"nombre": "Cuaderno espiralado", "precio": 2450, "id": 3},
-    {"nombre": "Juego de 6 vaos", "precio": 2501, "id": 4},
-    {"nombre": "Llavero", "precio": 7500, "id": 5},
-    {"nombre": "Musculosa", "precio": 2735, "id": 6},
-    {"nombre": "Remera con mangas", "precio": 2998, "id": 7},
-    {"nombre": "Remera sin mangas", "precio": 2299, "id": 8},
-    {"nombre": "Set remera-bolsa-taza", "precio": 4655, "id": 9},
-    {"nombre": "Taza", "precio": 1890, "id": 10}
+    {"id": 1, "nombre": "Agenda 2023", "precio": 3950, "imagen": "img/AgendaVeinteVeintitres.png"},
+    {"id": 2, "nombre": "Buzo con capucha", "precio": 4185, "imagen": "img/BuzoConCapucha.png" },
+    {"id": 3, "nombre": "Cuaderno espiralado", "precio": 2450, "imagen": "img/CuadernoEspiralado.png"},
+    {"id": 4, "nombre": "Juego de 6 vaos", "precio": 2501, "imagen": "img/JuegoSeisVasos.png"},
+    {"id": 5, "nombre": "Llavero", "precio": 7500, "imagen": "img/Llavero.png"},
+    {"id": 6, "nombre": "Musculosa", "precio": 2735, "imagen": "img/Musculosa.png"},
+    {"id": 7, "nombre": "Remera con mangas", "precio": 2998, "imagen": "img/RemeraConMangas.png"},
+    {"id": 8, "nombre": "Remera sin mangas", "precio": 2299, "imagen": "img/RemeraSinMangas.png"},
+    {"id": 9, "nombre": "Set remera-bolsa-taza", "precio": 4655, "imagen": "img/SetRemeraBolsaTaza.png"},
+    {"id": 10, "nombre": "Taza", "precio": 1890, "imagen": "img/Taza.png"}
 ]

@@ -38,8 +38,8 @@ if (localStorage.getItem("carrito")) {
 
 const contenedorProductos = document.getElementById("contenedorProductos");
 
-// Creamos una función para mostrar los productos.
 
+// Creamos una función con iteración para mostrar los productos.
 
 productos.forEach(producto => {
     console.log(producto)
@@ -70,6 +70,7 @@ const agregarAlCarrito = (id) => {
     const producto = productos.find((producto) => producto.id === id);
     const productoEnCarrito = carrito.find((producto) => producto.id === id);
     if (productoEnCarrito) {
+        // En esta función hay un ejemplo de Operador ++
         productoEnCarrito.cantidad++;
     } else {
         carrito.push(producto);
@@ -77,7 +78,16 @@ const agregarAlCarrito = (id) => {
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
     mostrarCarrito()
-}
+} 
+
+
+/* const agregarAlCarrito = (id) => {
+    const producto = productos.find((producto) => producto.id === id);
+    const productoEnCarrito = carrito.find((producto) => producto.id === id);
+
+    // En esta función hay un ejemplo de Operador Ternario, un Operador ++, y además guardamos en Local Storage
+     const agregarAlCarrito = productoEnCarrito.cantidad++ ? carrito.push(producto) : localStorage.setItem("carrito", JSON.stringify(carrito)); mostrarCarrito();
+}  */
 
 
 
