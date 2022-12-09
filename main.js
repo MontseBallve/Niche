@@ -12,13 +12,15 @@ fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
         datos.forEach (producto => {
-            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
-            <p> Precio: ${producto.precio}</p>
-            <p> ID: ${producto.id}</p>`
+            listado.innerHTML += `
+                <h2>Nombre: ${producto.nombre} </h2>
+                <p> Precio: ${producto.precio}</p>
+                <p> ID: ${producto.id}</p>
+            `
         })
     })
     .catch(error => console.log(error))
-    .finally(() => console.log("Proceso Finalizado"));
+    .finally (() => console.log ("Proceso Finalizado"))
 
 
 // Creamos una función con iteración para mostrar los productos.
@@ -38,7 +40,7 @@ function cargarProductos (data){
                 </div>
             `
         contenedorProductos.appendChild(card);
-    }) 
+    })
 
         // Agregar productos al carrito
         let btnComprar = document.querySelectorAll(`.btnComprar`);
@@ -48,31 +50,37 @@ function cargarProductos (data){
         })
     })
 }
- 
+
+const agregarAlCarrito = (id) => {
+    const producto = productos.find((producto) => producto.id === id);
+    const productoEnCarrito = carrito.find((producto) => producto.id === id);
+
 function agregarAlCarrito (id, data) {
     console.log(id)
     console.log(data)
-    const productoElegido = data.find(el => el.id === parseInt(id))
-    console.log(productoElegido)
+    const productoEnCarrito = data.find(el => el.id === parseInt(id))
+    console.log(productoEnCarrito)
 
-    carrito.push(productoElegido)
+    carrito.push(productoEnCarrito)
 
     //Guardar el carrito en Local Storage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 
-
-} 
+}} 
 
 fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
         datos.forEach (producto => {
-            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
-            <p> Precio: ${producto.precio}</p>
-            <p> ID: ${producto.id}</p>`
+            listado.innerHTML += `
+                <h2>Nombre: ${producto.nombre} </h2>
+                <p> Precio: ${producto.precio}</p>
+                <p> ID: ${producto.id}</p>
+            `
         })
     })
     .catch(error => console.log(error))
-    .finally(() => console.log("Proceso Finalizado"));
+    .finally (() => console.log ("Proceso Finalizado"))
 
 
 
@@ -105,17 +113,20 @@ const mostrarCarrito = () => {
     contenedorCarrito.innerHTML = aux;
 } 
 
+
 fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
         datos.forEach (producto => {
-            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
-            <p> Precio: ${producto.precio}</p>
-            <p> ID: ${producto.id}</p>`
+            listado.innerHTML += `
+                <h2>Nombre: ${producto.nombre} </h2>
+                <p> Precio: ${producto.precio}</p>
+                <p> ID: ${producto.id}</p>
+            `
         })
     })
     .catch(error => console.log(error))
-    .finally(() => console.log("Proceso Finalizado"));
+    .finally (() => console.log ("Proceso Finalizado"))
 
 
 // Mostramos mensaje con el cálculo total de la compra:
@@ -144,21 +155,24 @@ if (productoEnCarrito) {
     
 mostrarCarrito()
 
+
 fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
         datos.forEach (producto => {
-            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
-            <p> Precio: ${producto.precio}</p>
-            <p> ID: ${producto.id}</p>`
+            listado.innerHTML += `
+                <h2>Nombre: ${producto.nombre} </h2>
+                <p> Precio: ${producto.precio}</p>
+                <p> ID: ${producto.id}</p>
+            `
         })
     })
     .catch(error => console.log(error))
-    .finally(() => console.log("Proceso Finalizado"));
+    .finally (() => console.log ("Proceso Finalizado"))
 
     
 
-{/* // Creamos el array carrito
+/* // Creamos el array carrito
 
 //let changuito = [];
 
@@ -213,19 +227,9 @@ const taza = new Producto(10, "Taza", 1890, "img/Taza.png");
  */
 
 
-
-
-
 // Modificamos el DOM mostrando los productos.
 
 //const contenedorProductos = document.getElementById("contenedorProductos");
-
-
-
-
-
-
-
 
 
 /* const agregarAlCarrito = (id) => {
@@ -235,8 +239,6 @@ const taza = new Producto(10, "Taza", 1890, "img/Taza.png");
     // En esta función hay un ejemplo de Operador Ternario, un Operador ++, y además guardamos en Local Storage
      const agregarAlCarrito = productoEnCarrito.cantidad++ ? carrito.push(producto) : localStorage.setItem("carrito", JSON.stringify(carrito)); mostrarCarrito();
 }  */
-
-
 
 
 
@@ -254,18 +256,21 @@ const eliminarDelCarrito = (id) => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+
 fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
-        datos.forEach( producto => {
-            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
-            <p> Precio: ${producto.precio}</p>
-            <p> ID: ${producto.id}</p>`
+        datos.forEach (producto => {
+            listado.innerHTML += `
+                <h2>Nombre: ${producto.nombre} </h2>
+                <p> Precio: ${producto.precio}</p>
+                <p> ID: ${producto.id}</p>
+            `
         })
     })
     .catch(error => console.log(error))
-    .finally(() => console.log("Proceso Finalizado"));
-    
+    .finally (() => console.log ("Proceso Finalizado"))
+
 
 // Vaciamos carrito de compras:
 
@@ -275,6 +280,7 @@ vaciarCarrito.addEventListener("click", () => {
     eliminarTodoElCarrito();
 })
 
+
 // Función para eliminar todo el carrito:
 
 const eliminarTodoElCarrito = () => {
@@ -283,16 +289,19 @@ const eliminarTodoElCarrito = () => {
 
     //LocalStorage:
     localStorage.clear();
-}}
+}
+
 
 fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
         datos.forEach (producto => {
-            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
-            <p> Precio: ${producto.precio}</p>
-            <p> ID: ${producto.id}</p>`
+            listado.innerHTML += `
+                <h2>Nombre: ${producto.nombre} </h2>
+                <p> Precio: ${producto.precio}</p>
+                <p> ID: ${producto.id}</p>
+            `
         })
     })
     .catch(error => console.log(error))
-    .finally(() => console.log("Proceso Finalizado"));
+    .finally (() => console.log ("Proceso Finalizado"))
