@@ -4,11 +4,22 @@ let carrito = JSON.parse(localStorage.getItem(`carrito`)) || [];
 //Contenedor productos
 const productos = document.querySelector(`#contenedorProductos`);
 
-fetch(`json/productos.json`)
-.then(resultado => resultado.json)
-.then(data => cargarProductos.data)
-.catch(error => console.log(error))
-.finally (() => console.log ("Proceso Finalizado"))
+const listado = document.getElementById("listado");
+
+const listadoProductos = "json/productos.json";
+
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach (producto => {
+            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
+            <p> Precio: ${producto.precio}</p>
+            <p> ID: ${producto.id}</p>`
+        })
+    })
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Finalizado"));
+
 
 // Creamos una función con iteración para mostrar los productos.
 function cargarProductos (data){
@@ -27,8 +38,8 @@ function cargarProductos (data){
                 </div>
             `
         contenedorProductos.appendChild(card);
-     
     }) 
+
         // Agregar productos al carrito
         let btnComprar = document.querySelectorAll(`.btnComprar`);
         btnComprar.foeEach(el => {
@@ -50,6 +61,20 @@ function agregarAlCarrito (id, data) {
 
 
 } 
+
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach (producto => {
+            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
+            <p> Precio: ${producto.precio}</p>
+            <p> ID: ${producto.id}</p>`
+        })
+    })
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Finalizado"));
+
+
 
 // Mostrar el carrito de compras:
 
@@ -80,6 +105,19 @@ const mostrarCarrito = () => {
     contenedorCarrito.innerHTML = aux;
 } 
 
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach (producto => {
+            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
+            <p> Precio: ${producto.precio}</p>
+            <p> ID: ${producto.id}</p>`
+        })
+    })
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Finalizado"));
+
+
 // Mostramos mensaje con el cálculo total de la compra:
 
 const total = document.getElementById("total");
@@ -106,7 +144,21 @@ if (productoEnCarrito) {
     
 mostrarCarrito()
 
-// Creamos el array carrito
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach (producto => {
+            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
+            <p> Precio: ${producto.precio}</p>
+            <p> ID: ${producto.id}</p>`
+        })
+    })
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Finalizado"));
+
+    
+
+{/* // Creamos el array carrito
 
 //let changuito = [];
 
@@ -202,6 +254,19 @@ const eliminarDelCarrito = (id) => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach( producto => {
+            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
+            <p> Precio: ${producto.precio}</p>
+            <p> ID: ${producto.id}</p>`
+        })
+    })
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Finalizado"));
+    
+
 // Vaciamos carrito de compras:
 
 const vaciarCarrito = document.getElementById("vaciarCarrito");
@@ -218,8 +283,16 @@ const eliminarTodoElCarrito = () => {
 
     //LocalStorage:
     localStorage.clear();
-}
+}}
 
-
-
-
+fetch(listadoProductos)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        datos.forEach (producto => {
+            listado.innerHTML += `<h2>Nombre:asdasd ${producto.nombre} </h2>
+            <p> Precio: ${producto.precio}</p>
+            <p> ID: ${producto.id}</p>`
+        })
+    })
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Finalizado"));

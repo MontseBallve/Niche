@@ -1,6 +1,6 @@
 [
     {"id": 1, "nombre": "Agenda 2023", "precio": 3950, "imagen": "img/AgendaVeinteVeintitres.png"},
-    {"id": 2, "nombre": "Buzo con capucha", "precio": 4185, "imagen": "img/BuzoConCapucha.png" },
+    {"id": 2, "nombre": "Buzo con capucha", "precio": 4185, "imagen": "img/BuzoConCapucha.png"},
     {"id": 3, "nombre": "Cuaderno espiralado", "precio": 2450, "imagen": "img/CuadernoEspiralado.png"},
     {"id": 4, "nombre": "Juego de 6 vaos", "precio": 2501, "imagen": "img/JuegoSeisVasos.png"},
     {"id": 5, "nombre": "Llavero", "precio": 7500, "imagen": "img/Llavero.png"},
