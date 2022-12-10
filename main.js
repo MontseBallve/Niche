@@ -2,25 +2,15 @@
 let carrito = JSON.parse(localStorage.getItem(`carrito`)) || [];
 
 //Contenedor productos
+
 const productos = document.querySelector(`#contenedorProductos`);
+
+const contenedorProductos = document.getElementById("contenedorProductos");
 
 const listado = document.getElementById("listado");
 
-const listadoProductos = "json/productos.json";
+const listadoProductos = "json/stock.json";
 
-fetch(listadoProductos)
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        datos.forEach (producto => {
-            listado.innerHTML += `
-                <h2>Nombre: ${producto.nombre} </h2>
-                <p> Precio: ${producto.precio}</p>
-                <p> ID: ${producto.id}</p>
-            `
-        })
-    })
-    .catch(error => console.log(error))
-    .finally (() => console.log ("Proceso Finalizado"))
 
 
 // Creamos una función con iteración para mostrar los productos.
@@ -40,7 +30,7 @@ function cargarProductos (data){
                 </div>
             `
         contenedorProductos.appendChild(card);
-    })
+
 
         // Agregar productos al carrito
         let btnComprar = document.querySelectorAll(`.btnComprar`);
@@ -49,7 +39,23 @@ function cargarProductos (data){
                 agregarAlCarrito(e.target.id, data)
         })
     })
+    fetch(listadoProductos)
+            .then(respuesta => respuesta.json())
+            .then(datos => {
+                datos.forEach (producto => {
+                    listado.innerHTML += `
+                        <h2>Nombre: ${producto.nombre} </h2>
+                        <p> Precio: ${producto.precio}</p>
+                        <p> ID: ${producto.id}</p> 
+                    `
+                })
+    })
+    .catch (error => console.log (error))
+    .finally (() => console.log ("Proceso Finalizado"))
+    })
 }
+
+//const producto = productos.find((producto) => producto.id === id);
 
 const agregarAlCarrito = (id) => {
     const producto = productos.find((producto) => producto.id === id);
@@ -65,24 +71,20 @@ function agregarAlCarrito (id, data) {
 
     //Guardar el carrito en Local Storage
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
-}} 
-
-fetch(listadoProductos)
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        datos.forEach (producto => {
-            listado.innerHTML += `
-                <h2>Nombre: ${producto.nombre} </h2>
-                <p> Precio: ${producto.precio}</p>
-                <p> ID: ${producto.id}</p>
-            `
+    fetch(listadoProductos)
+        .then(respuesta => respuesta.json())
+        .then(datos => {
+            datos.forEach (producto => {
+                listado.innerHTML += `
+                    <h2>Nombre: ${producto.nombre} </h2>
+                    <p> Precio: ${producto.precio}</p>
+                    <p> ID: ${producto.id}</p>
+                `
+            })
         })
-    })
     .catch(error => console.log(error))
     .finally (() => console.log ("Proceso Finalizado"))
-
-
+}} 
 
 // Mostrar el carrito de compras:
 
@@ -111,22 +113,8 @@ const mostrarCarrito = () => {
         `    
     })
     contenedorCarrito.innerHTML = aux;
+    verCarrito.innerHTML = aux;
 } 
-
-
-fetch(listadoProductos)
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        datos.forEach (producto => {
-            listado.innerHTML += `
-                <h2>Nombre: ${producto.nombre} </h2>
-                <p> Precio: ${producto.precio}</p>
-                <p> ID: ${producto.id}</p>
-            `
-        })
-    })
-    .catch(error => console.log(error))
-    .finally (() => console.log ("Proceso Finalizado"))
 
 
 // Mostramos mensaje con el cálculo total de la compra:
@@ -155,93 +143,6 @@ if (productoEnCarrito) {
     
 mostrarCarrito()
 
-
-fetch(listadoProductos)
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        datos.forEach (producto => {
-            listado.innerHTML += `
-                <h2>Nombre: ${producto.nombre} </h2>
-                <p> Precio: ${producto.precio}</p>
-                <p> ID: ${producto.id}</p>
-            `
-        })
-    })
-    .catch(error => console.log(error))
-    .finally (() => console.log ("Proceso Finalizado"))
-
-    
-
-/* // Creamos el array carrito
-
-//let changuito = [];
-
-// Cargar carrito desde el LocalStorage:
-
-/* if (localStorage.getItem("carrito")) {
-    carrito = JSON.parse(localStorage.getItem("carrito"));
-} */
-
-
-
-//Ruta relativa
-
-/* const listado = document.getElementById ("listado");
-const listadoProductos = "json/productos.json";
-
-fetch(listadoProductos)
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        datos.forEach (producto => {
-            listado.innerHTML += `
-                <h2>Nombre: ${producto.nombre} </h2>
-                <p> Precio: ${producto.precio}</p>
-                <p> ID: ${producto.id}</p>
-            `
-        })
-    })
-    .catch(error => console.log(error))
-    .finally (() => console.log ("Proceso Finalizado")) */
-    
-
-/* class Producto {
-    constructor(id, nombre, precio, img) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.img = img;
-        this.cantidad = 1;
-    }
-} */
-
-/* const agenda = new Producto(1, "Agendas 2023", 3950, "img/AgendaVeinteVeintitres.png");
-const buzoConCapucha = new Producto(2, "Buzo con capucha", 4185, "img/BuzoConCapucha.png");
-const cuadernoEspiralado = new Producto(3, "Cuaderno espiralado", 2450, "img/CuadernoEspiralado.png");
-const juegoSeisVasos = new Producto(4, "Juego de 6 vasos", 2501, "img/JuegoSeisVasos.png");
-const llavero = new Producto(5, "Llavero", 7500, "img/Llavero.png");
-const musculosa = new Producto(6, "Musculosa", 2735, "img/Musculosa.png");
-const remeraConMangas = new Producto(7, "Remera con mangas", 2998, "img/RemeraConMangas.png");
-const remeraSinMangas = new Producto(8, "Remera sin mangas", 2299, "img/RemeraSinMangas.png");
-const setRemeraBolsaTaza = new Producto(9, "Set remera-bolsa-taza", 4655, "img/SetRemeraBolsaTaza.png");
-const taza = new Producto(10, "Taza", 1890, "img/Taza.png");
- */
-
-
-// Modificamos el DOM mostrando los productos.
-
-//const contenedorProductos = document.getElementById("contenedorProductos");
-
-
-/* const agregarAlCarrito = (id) => {
-    const producto = productos.find((producto) => producto.id === id);
-    const productoEnCarrito = carrito.find((producto) => producto.id === id);
-
-    // En esta función hay un ejemplo de Operador Ternario, un Operador ++, y además guardamos en Local Storage
-     const agregarAlCarrito = productoEnCarrito.cantidad++ ? carrito.push(producto) : localStorage.setItem("carrito", JSON.stringify(carrito)); mostrarCarrito();
-}  */
-
-
-
 // Función que elimina el producto del carrito:
 
 const eliminarDelCarrito = (id) => {
@@ -254,10 +155,8 @@ const eliminarDelCarrito = (id) => {
 
     // LocalStorage:
     localStorage.setItem("carrito", JSON.stringify(carrito));
-}
 
-
-fetch(listadoProductos)
+    fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
         datos.forEach (producto => {
@@ -270,6 +169,7 @@ fetch(listadoProductos)
     })
     .catch(error => console.log(error))
     .finally (() => console.log ("Proceso Finalizado"))
+}
 
 
 // Vaciamos carrito de compras:
@@ -289,10 +189,8 @@ const eliminarTodoElCarrito = () => {
 
     //LocalStorage:
     localStorage.clear();
-}
 
-
-fetch(listadoProductos)
+    fetch(listadoProductos)
     .then(respuesta => respuesta.json())
     .then(datos => {
         datos.forEach (producto => {
@@ -305,3 +203,15 @@ fetch(listadoProductos)
     })
     .catch(error => console.log(error))
     .finally (() => console.log ("Proceso Finalizado"))
+}
+
+
+
+
+
+
+   
+    
+    
+
+
