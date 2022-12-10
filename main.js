@@ -205,13 +205,4 @@ const eliminarTodoElCarrito = () => {
     .finally (() => console.log ("Proceso Finalizado"))
 }
 
-
-
-
-
-
-   
     
-    
-
-
