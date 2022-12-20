@@ -7,7 +7,7 @@
     {"id": 2, 
     "nombre": "Buzo con capucha", 
     "precio": 8930,  
-    "imagen": "<img class='imgProducto' src='../img/buzoconcapucha.png' alt='Buzo con capucha'>"},
+    "imagen": "<img class='imgProducto' src='../img/buzoConCapucha.png' alt='Buzo con capucha'>"},
 
     {"id": 3, 
     "nombre": "Cuadedrno Espiralado",
