@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+  
+    @import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Titillium+Web:ital@0;1&display=swap");
+  }
+  
+  .bgimage {
+    height: 400px;
+    background-image: url("../img/arrows-opposite-choice-correct-solution-icon.jpg");
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: 6px solid rgb(0, 44, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .contenedorMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 450px;
+    background-color: rgb(156, 185, 156);
+    opacity: 0.75;
+    border-radius: 10px;
+  }
+  
+  .contenedorMain h2 {
+    color: rgb(0, 44, 0);
+    font-size: 45px;
+    text-align: center;
+    font-family: "Nothing You Could Do", cursive;
+  }
+  .contenedorMain h4 {
+    color: rgb(0, 44, 0);
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: "Nothing You Could Do", cursive;
+  }
+  
+  .contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    grid-area: prod;
+  }
+  .areaGrid {
+    display: grid;
+    grid-template-areas:
+      "prod prod prod prod carr carr carr"
+      "prod prod prod prod carr carr carr"
+      "prod prod prod prod carr carr carr"
+      "prod prod prod prod carr carr carr";
+    gap: 10px;
+  }
+  
+  .carrito {  
+    
+    width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid #dddddd;
+    grid-area: carr;
+    z-index: 10;
+  }
+  
+  h3 {
+    font-family: "Nothing You Could Do", cursive;
+    margin: 6px;
+    color: rgb(31, 61, 116);
+  }
+  h4 {
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Nothing You Could Do", cursive;
+    margin: 6px;
+    color: rgb(31, 61, 116);
+    font-size: 1.5rem;
+  }
+  
+  .detalleItemCarro p {
+    margin: 1px;
+    font-size: 0.75rem;
+    padding: 5px;
+    color: rgb(31, 61, 116);
+    border-color: 0px solid rgb(189, 189, 189);
+  }
+  .titulo {
+    font-size: 0.8rem !important;
+    font-weight: bold;
+    color: #002c00 !important;
+  }
+  .producto {
+    font-family: "Nothing You Could Do", cursive;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.25rem;
+    color: rgb(31, 61, 116);
+  }
+  .valores {
+    font-family: "Nothing You Could Do", cursive;
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgb(31, 61, 116);
+    margin-bottom: 10px;
+  }
+  
+  .colBorrar {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .borrar {
+    display: inline-block;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 0.5rem;
+    grid-area: borrar;
+    margin-top: 5px;
+    width: 40px;
+    height: 15px;
+    border: 0px solid;
+    border-radius: 2px;
+    background: #5f0020;
+  }
+  
+  .borrarItem {
+    cursor: pointer;
+    width: 15px;
+    filter: invert(9%) sepia(28%) saturate(7280%) hue-rotate(322deg)
+      brightness(99%) contrast(112%);
+  }
+  .colorless {
+    background: none;
+  }
+  .itemCarro {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+  }
+  .visualItemCarro {
+    display: flex;
+  }
+  
+  .cardProducto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 360px;
+    width: 250px;
+    border-radius: 8px;
+  }
+  
+  .imgProducto {
+    height: 170px;
+  }
+  .carro {
+    width: 40px;
+    height: 40px;
+  }
+  .descProducto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .descProducto p,
+  h2,
+  h5 {
+    margin: 2px;
+  }
+  .descProducto p {
+    font-size: 0.55rem;
+  }
+  
+  .cant_btn {
+    width: 25px;
+    margin: 10px;
+  }
+  .cant_input {
+    width: 35px;
+    text-align: center;
+  }
+  
+  .cant_input_carro {
+    font-family: "Nothing You Could Do", cursive;
+    border: 0px solid;
+    height: 25px;
+    width: 40px;
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgb(31, 61, 116);
+    background: none;
+  }
+  .btn_carrito {
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100px;
+    height: 25px;
+    border: 0px solid;
+    border-radius: 5px;
+    background: #00bc0d;
+  }
+  .headerCarrito {
+    display: flex;
+    justify-items: space-between;
+  }
+  table {
+    border-bottom: 1px solid grey;
+  }
+  .vaciarCarrito {
+    width: 25px;
+    cursor: pointer;
+    filter: invert(9%) sepia(28%) saturate(7280%) hue-rotate(322deg)
+      brightness(99%) contrast(112%);
+  }
+  .alerta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5f0020;
+    height: 50px;
+    background: #ffb9d0;
+  }
+  .headerTabla {
+    color: grey;
+    height: 25px;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .mostrarCarrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00bc0d;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    
+  }
+  
+  .iconoCarrito {
+    width: 35px;
+    filter: invert(100%) sepia(1%) saturate(2359%) hue-rotate(190deg)
+      brightness(119%) contrast(92%);
+  }
+  
+  .cerrarCarrito {
+    cursor: pointer;
+    width: 25px;
+    filter: invert(9%) sepia(28%) saturate(7280%) hue-rotate(322deg)
+      brightness(99%) contrast(112%);
+  }
+  .ocultar{
+    display: none;
+  }
+  
+  footer{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #002c00;
+  }
+  
+  footer p{
+    color: whitesmoke;
+    font-size: 0.8rem;
+  }
+  
+  .imagenIcono{
+    height: 40px;
+  }
+  .info{
+    display: flex;
+    align-items: center;
+  }
+    
+  .weather{
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  @media (max-width: 500px) {
+    .carrito{
+      width: 90vw;
+    }
+    .areaGrid {
+      display: grid;
+      grid-template-areas:
+        "carr carr "
+        "prod prod ";
+      gap: 10px;
+    }
+    .imgProducto{
+      width: 100px;
+    }
+  
+    .cardProducto {    
+      width: 150px;    
+    }
+  }
+  
+  @media (min-width: 501px) and (max-width: 768px) {
+    
+    .imgProducto{
+      width: 125px;
+    }
+  
+    .cardProducto {    
+      width: 188px;    
+    }
+  }

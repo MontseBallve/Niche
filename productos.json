@@ -1,0 +1,51 @@
+[
+    {"id": 1,  
+    "nombre": "Agenda 2023", 
+    "precio": 5500,  
+    "imagen": "<img class='imgProducto' src='../img/agendaveinteveintitres.png' alt='Agenda 2023'>"},
+
+    {"id": 2, 
+    "nombre": "Buzo con capucha", 
+    "precio": 8930,  
+    "imagen": "<img class='imgProducto' src='../img/buzoConCapucha.png' alt='Buzo con capucha'>"},
+
+    {"id": 3, 
+    "nombre": "Cuadedrno Espiralado",
+    "precio": 1350,
+    "imagen": "<img class='imgProducto' src='../img/CuadernoEspiralado.png' alt='Cuaderno Espiralado'>"},
+
+    {"id": 4, 
+    "nombre": "Juego seis vasos",  
+    "precio": 5490,  
+    "imagen": "<img class='imgProducto' src='../img/JuegoSeisVasos.png' alt='Juego de 6 vasos'>"},
+
+    {"id": 5,
+    "nombre": "Llavero", 
+    "precio": 1540, 
+    "imagen": "<img class='imgProducto' src='../img/Llavero.png' alt='Llavero'>"},
+
+    {"id": 6,
+    "nombre": "Musculosa", 
+    "precio": 3590, 
+    "imagen": "<img class='imgProducto' src='../img/Musculosa.png' alt='Musculosa'>"},
+
+    {"id": 7, 
+    "nombre": "Remera con mangas",  
+    "precio": 4990,  
+    "imagen": "<img class='imgProducto' src='../img/RemeraConMangas.png' alt='Remera con mangas'>"},
+
+    {"id": 8, 
+    "nombre": "Remera sin mangas",  
+    "precio": 4290,  
+    "imagen": "<img class='imgProducto' src='../img/RemeraSinMangas.png' alt='Remera sin mangas'>"},
+
+    {"id": 9, 
+    "nombre": "Set remera-bolsa-taza",  
+    "precio": 9350,  
+    "imagen": "<img class='imgProducto' src='../img/SetRemeraBolsaTaza.png' alt='Set remera-bolsa-taza'>"},
+
+    {"id": 10, 
+    "nombre": "Taza",  
+    "precio": 2500,  
+    "imagen": "<img class='imgProducto' src='../img/Taza.png' alt='Taza'>"}
+]
